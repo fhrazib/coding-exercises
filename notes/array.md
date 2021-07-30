@@ -67,7 +67,7 @@ We'd say this dynamic array's **size** is 4 and its **capacity** is 10. The dyna
 What if we try to append an item but our array's capacity is already full?
 To make room, dynamic arrays automatically make a new, bigger underlying array. Usually twice as big.
 
->**Why not just _extend_ the existing array? **
+>Why not just _extend_ the existing array?  
 >Because that memory might already be taken by another program.
 
 Each item has to be individually copied into the new array.
