@@ -9,7 +9,7 @@
 - Array is the simplest data structure. It represents a collection of items **of same types** stored in at **contiguous memory location.**   
 - Each position of an array has an `index` - starting at 0
 - If you know the base address of an array and size of each element the array contains then you can find the any element from the array
-- ![[array-base-address-offset.png]]
+- ![array](../images/array-base-address-offset.png)
 	- $offset to A[i]=ixsize(one array element)$
 - **Operations on array**
 	- lookup
@@ -30,7 +30,7 @@
 	- **Costly insertion and delete**
 		- You have to ["scoot over" the other elements to fill in or close gaps], which takes worst-case O(n)O(n) time.
 - **Cost of different operations in array**
-	- ![[array-oparations-cost.png]]
+	- ![](../images/array-oparations-cost.png)
 
 ### Implementation in popular programming languages
 - **Java**
@@ -57,7 +57,7 @@
 - **Strength**
 - **Weakness**
 - **Cost of different operations**
-	- ![[dynamic-array-costs.png.png]]
+	- ![](../images/dynamic-array-costs.png.png)
 
 ### How does dynamic array work?
 #### Size vs. Capacity
@@ -65,7 +65,7 @@ When you allocate a dynamic array, your dynamic array implementation makes an _u
 
 We'd say this dynamic array's **size** is 4 and its **capacity** is 10. The dynamic array stores an **end_index** to keep track of where the dynamic array ends and the extra capacity begins.
 
-![[da-size-capacity.png]]
+![](../images/da-size-capacity.png)
 
 #### Doubling Appends
 
@@ -77,7 +77,7 @@ To make room, dynamic arrays automatically make a new, bigger underlying array. 
 
 Each item has to be individually copied into the new array.
 
-![[doubling-dynamic-array.png]]
+![](../images/doubling-dynamic-array.png)
 
 Copying each item over costs O(n)O(n) time! So whenever appending an item to our dynamic array forces us to make a new double-size underlying array, that append takes O(n)O(n) time.
 That's the _worst_ case. But in the best case (and the _average_ case), appends are just O(1)O(1) time.
