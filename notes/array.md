@@ -19,7 +19,7 @@
 		- using the index number you can access any element from the array - no matter whether the element is at the star/mid/end of the array
 - **Weakness**
 	- **Fixed size** 
-		- You need to specify how many elements you're going to store in your array ahead of time. (Unless you're using a fancy [dynamic array](#Dynamic Array).)
+		- You need to specify how many elements you're going to store in your array ahead of time. (Unless you're using a fancy [dynamic array](#dynamic-array).)
 	- **Costly insertion and delete**
 		- You have to ["scoot over" the other elements to fill in or close gaps], which takes worst-case O(n)O(n) time.
 - **Cost of different operations in array**
