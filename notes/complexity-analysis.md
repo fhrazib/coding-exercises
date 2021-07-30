@@ -25,37 +25,18 @@
 
 ![](../images/big-o-and-function-relation.png)
 - **NOTE:**
-	- O (big-o) is a way of defining a set of functions.
-		- big-O represent a pure set of functions
-		- O(n) - defines set of all function of the form `an+c`, set of all first order function
-			- $T_{1}(n)=25n+1$
-			- $T_{2}(n)=4n+26$
-			- all linear time function (of the form -$An+C$ )like $T_{1}, T_{2} \in O(n)$ 
-		- Similarly, $O(n)$ - defines set of all function of the form **$an^2+bn+c$**
-			- $T_{3}(n)=5n^2 +2n +1$
-			- $T_{4}(n)=8n^2+19n +25$
-			- $T_{5}(n)=15n^2+23$
-			-  $T_{6}(n)=17n^2$
-			- all `quadratic function` like $T_{3}, T_{4}, T_{5}, T_{6} \in O(n)$
-		- $O(k)$ - defines all function of the form $T(n)=k$
-			-  $T_{7}(n)=15$
-			-  $T_{8}(n)=87$
-			- all function like $T_{7}, T_{8} \in O(k)$
-				- you can write any constant instead of `k`. $O(k),O(1), O(2), O(3)...$ all are same thing. 
-				- by convention we use $O(1)$
+  ![img.png](../images/equations-1.png)
 
 
 ### Complexity analysis - some general rules
 - ![](../images/big-o-n2.png)
-	- the above graph is a graph of $O(n^2)$
-	- if you draw this graphs for all $T_{3}, T_{4}, T_{5}$ you can notice after some certain value of `n` (say $n_{0}$), the growth of the functions will not faster than $O(n^2)$
-
+	![img.png](../images/img.png)
  - <span class="stress3">**Rules to calculate complexity from $T(n)$ expression:**</span> (based on the above fact)
 	 - from the time function, drop all the lower order terms
 	- from the time function, drop all constant constant multipliers
 	- now take only the higher order term, and that will be your complexity 
 	- **Example:**
-		- $53n^3 +27n^2 + 25n +11$ (dropping lower order terms) => $53n^3$ =>(dropping constant multipliers) =>$n^3$ =>  $O(n^3)$ 
+		![img.png](../images/img2.png)
 		![](../images/complexity-analysis-rules-1.png)
 
 - <span class="stress3">**Some simplification rules of $O(n)$**</span>
