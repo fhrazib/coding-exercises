@@ -1,10 +1,3 @@
-%%
-	30th July 2021
-%%
-
-#algorithm #data-structure #interview-prep 
-
----
 ## Array
 - Array is the simplest data structure. It represents a collection of items **of same types** stored in at **contiguous memory location.**   
 - Each position of an array has an `index` - starting at 0
@@ -46,6 +39,8 @@
 	```
 - **Python**
 	 - Python core dosen't provide any fixed size array, rather it provides you dynamic array which is list
+--- 
+
 ## Dynamic Array
 - One problem with array is that we have to say the size of the array while creating the array. But often while creating an array we don't know the how many elements there will be in the array. Dynamic array solves this problem - you don't need to mention the size of the array while creating the array. The size of the array grows when needed. 
 - **Operations on array**
