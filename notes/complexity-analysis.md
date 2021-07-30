@@ -71,7 +71,5 @@
 	- drop the lower order terms from the expression
 	- drop the multiplying constants from the expression 
 	- pick the higher order while your code has multiple fragments of different complexity  
-	- pick the higher order from if/else/switch branches 
-
-### Determine the complexity - short way | exercises
+	- pick the higher order from if/else/switch branches
 
