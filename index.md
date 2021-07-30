@@ -1,6 +1,8 @@
 # Index  
 ### Complexity analysis
-[Complexity Analysis](./notes/complexity-analysis.md)
+[How complexity analysis done?](./notes/complexity-analysis.md#how-complexity-analysis-done)  
+[Relationship between the time expression/function T(n) and the big-o notation](./notes/complexity-analysis.md#the-time-function-tn-graph-and-relation-between-big-o-notation-and-time-function-tn)  
+[Complexity analysis some general rules](./notes/complexity-analysis.md#complexity-analysis---some-general-rules)  
 ### Array
 [Array](./notes/array.md)  
 [Dynamic Array](./notes/array.md#dynamic-array)  

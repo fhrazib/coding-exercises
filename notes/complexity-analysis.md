@@ -9,7 +9,7 @@
  - all of the above from the list except **the volume of input** data depends on particular type of computer and hardware implementation. So to judge the efficiency of an algorithm considering these factor will not be wise. If we want to compare the efficiency of different algorithm we only consider the volume of input. 
 #### The model machine concept
 -	since everyone is using different machine, calculating the actual running time in seconds for different algorithm is not possible. So a model machine concept is introduced to deduce the running time of a algorithm in seconds. All algorithm is run on this machine to get approximate time.
--	![sdfsdfsdff](../images/calculating-complexity-in-model-machine.png)
+-	![](../images/calculating-complexity-in-model-machine.png)
 	-	**NOTE**: 
 		-	besides each line we write the cost of complexity according to the model machine
 			-	at line 1 assignment takes 1 unit time
