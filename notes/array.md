@@ -108,4 +108,6 @@ That's the _worst_ case. But in the best case (and the _average_ case), appends 
 
 	
 	```
-## Coding exercise
+## Coding exercise  
+[Reversing array simple way (see reverse_v1)](../code/array/reverse_array.py)    
+[Reversing array efficient way (see reverse_v2)](../code/array/reverse_array.py)  
