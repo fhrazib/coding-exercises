@@ -24,7 +24,8 @@
 
 
 ![](../images/big-o-and-function-relation.png)
-- **NOTE:**
+- **NOTE:**  
+  
   ![img.png](../images/equations-1.png)
 
 
@@ -35,11 +36,11 @@
 	 - from the time function, drop all the lower order terms
 	- from the time function, drop all constant constant multipliers
 	- now take only the higher order term, and that will be your complexity 
-	- **Example:**
-		![img.png](../images/img2.png)
+	- **Example:**  
+		![img.png](../images/img2.png)  
 		![](../images/complexity-analysis-rules-1.png)
 
-- <span class="stress3">**Some simplification rules of $O(n)$**</span>
+- <span class="stress3">**Some simplification rules of O(n)**</span>
 	- if your code have multiple branches (due to the if else) to execute and each branch has different time complexity ==> complexity ==> complexity of the larger branch
 		- ![](../images/complexity-analysis-rules-4.png)
 	-  if you algorithm has multiple code fragment of different order of complexity sum them up and simplify
