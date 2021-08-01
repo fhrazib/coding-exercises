@@ -1,6 +1,5 @@
-<pre>Index                                                                 Next
+<div><span style="float:left;">Index</span> <span style="float:right;"></span></div>
 
- </pre>
 ---
 
 ## OOP Concepts
