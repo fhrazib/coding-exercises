@@ -3,7 +3,7 @@
 ### Object
 ### Immutable 
 ## Two pointers technique
-## Palindrome Check
-### 1st Attempt
-### 2nd Attempt
-### 3rd Attempt
+### Problem-solving example with two pointers - Palindrome Check
+#### 1st Attempt
+#### 2nd Attempt
+#### 3rd Attempt
