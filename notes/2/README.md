@@ -1,4 +1,7 @@
-<div><span style="float:right;">Index</span> <span style="float:left;">Next</span></div>
+<div> 
+  <span style="float:left;">Index</span> 
+  <span style="float:left;">Next</span>
+</div>
 
 ---
 
