@@ -1,5 +1,5 @@
-<div> 
-  <span style="align:center">Index</span> 
+<div style="text-align:center"> 
+  <span>Index</span> 
 </div>
 
 ---
