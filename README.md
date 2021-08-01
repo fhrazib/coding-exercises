@@ -9,7 +9,7 @@
 [Array](./notes/array.md)  
 [Dynamic Array](./notes/array.md#dynamic-array)  
 #### [Coding exercises (Array)](./notes/array.md#coding-exercise)
-[Reversing array simple way (see reverse_v1)](./code/array/reverse_array.py)    
-[Reversing array efficient way (see reverse_v2)](./code/array/reverse_array.py)  
-[Leetcode problem: Two sum](./code/array/two_sum.py)   
+[Reversing array simple way (see reverse_v1)](problems/array/reverse_array.py)    
+[Reversing array efficient way (see reverse_v2)](problems/array/reverse_array.py)  
+[Leetcode problem: Two sum](problems/array/two_sum.py)   
  
