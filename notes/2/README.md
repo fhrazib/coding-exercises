@@ -1,8 +1,6 @@
-<div style="text-align:center"> 
-  <span>Index</span> 
-</div>
 
----
+
+--- 
 
 ## OOP Concepts
 ### Class
