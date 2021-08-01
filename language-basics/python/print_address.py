@@ -13,7 +13,7 @@ s = s + "def"
 print('address of s, after concatenation: ', id(s))
 print('address of s1: ', id(s1))
 
-# Address of n also changed (?) - are they also immutable in python
+# Address of int also changed (?) - are they also immutable in python
 n = 24
 print('address of n: ', id(n))
 n = n + 100
