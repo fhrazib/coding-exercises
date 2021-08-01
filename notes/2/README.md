@@ -1,7 +1,6 @@
-<pre>Index                                                                 Next
 
- </pre>
----
+
+--- 
 
 ## OOP Concepts
 ### Class
