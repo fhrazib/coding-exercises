@@ -1,6 +1,5 @@
 <div> 
-  <span style="float:left;">Index</span> 
-  <span style="float:left;">Next</span>
+  <span style="align:center">Index</span> 
 </div>
 
 ---
