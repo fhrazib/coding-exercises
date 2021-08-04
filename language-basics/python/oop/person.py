@@ -10,3 +10,6 @@ class Person:
 
     def __str__(self):
         return self.full_name + ", " + str(self.age) + ", " + self.sex
+
+    def read(self):
+        print(self.full_name + ' reading news papers....')

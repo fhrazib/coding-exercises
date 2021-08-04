@@ -16,9 +16,14 @@ del p1.full_name
 # print(p1.full_name)  # AttributeError
 print(p2.age)  # 18
 
+print(p2)  # Everything OK as expected
+del p2
+# print(p2)  # But now, "NameError name 'p2' is not defined"
+
 """
 NOTE:
     - you can add attribute in python object even if the class definition doesn't contain that attribute.
     We have added attribute 'occupation' to p1 even though the Person class doesn't have it.
     - 'del' keyword not only remove the value of attribute it delete the attribute itself.
+    - del keyword also remove object
 """
