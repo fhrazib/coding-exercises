@@ -1,8 +1,9 @@
 
 
---- 
+---
 
-## OOP Concepts
+## OOP Basics
+With structural or procedural programming language 
 ### Class
 ### Object
 ### Immutable 
