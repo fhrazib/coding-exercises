@@ -1,6 +1,7 @@
 """
+Name:
 URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-tag: #array, #two-pointers
+Tags: #array, #two-pointers
 """
 from typing import List
 
