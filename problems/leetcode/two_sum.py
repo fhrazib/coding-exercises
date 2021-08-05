@@ -5,6 +5,7 @@ Two sum
 leetcode url: https://leetcode.com/problems/two-sum/
 """
 
+
 class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
