@@ -123,11 +123,97 @@ Inheritance is the process by which one class acquires the properties(data membe
 	- Even both `dog` and `cat` object are subclass of `Animal`  class, and they both implement the same method `makeSound()`but here they are acting differently based on their implementation. This behavior is known as method overriding.
 	- Also known as dynamic polymorphism,  or run time polymorphism. 
 
+--- 
+
+## Immutability
+- **Immutable Object**
+	- An immutable object is one that will not change it's state after it is instantiated. All data contained by the immutable class are provided to the constructor while the object is being created. You can not mutate (or change) them throughout the lifespan of the object.
+- **Reason for using Immutable class** 
+	- There are many good reason to use immutable classes - they are easy to design, implement, and use than mutable class. They are less prone to error and are more secure.
+
+- **Example** 
+	- In  Java platform libraries:   `String`, `BigDecimal`, `BigInteger`, all wrapper types of primitive type (Integer, Long, Double)
+### How to make a class immutable?
+- Five rules to make a class immutable
+	- **Do not provide methods that change the object's state(aka - mutators).**
+		- Example of mutators public setter methods
+	- **Ensure that class can't be extended**
+		- by making it `final`
+		- **Why it is important to prevent subclassing for immutable class?** 
+			- cause careless or malicious subclass could compromise the immutable behavior of this class
+		- alternative of preventing extending class is - to remove public, and default constructors and to provide static instance factory method
+	- **Make all fields final**
+	- **Make all fields private**
+		- Make all fields private - both primitive , and referenced type (eg.- List, Map etc)
+			- if you don't make referenced type private, clients from obtaining class could change the value of the referenced type
+		- Though it is technically possible for immutable class to ***have public final fields*** - ***containing primitive values*** or ***reference to immutable object***
+			- but it is not recommended because it precludes changing the internal representation in a later release
+	- **Ensure exclusive access to any mutable components**
+		- If your class has any fields that refer to mutable objects (eg. - `List`), ensure that clients of the class can not obtain reference to these objects. 
+			- **Never directly initialize mutable reference type data provided by the client**, and **never return reference type data directly from accessors (method)**
+				- make **defensive copies** in **constrictors**, **accessors**, `readObject` method.
 
 
+### Advantage of immutable class
+- **Ease of use**
+	- Immutable objects are simple. An immutable object can exactly be in one state in which it was created. 
+	- Mutable objects, on the other hand could have arbitrarily complex state spaces. 
+		- If documentation doesn't provide its very difficult or impossible to use mutable class reliably.
+- **Inherent thread safety** 
+	- They are inherently thread safe; they do not require **synchronization**. 
+		- they can not be corrupted by multiple threads accessing them concurrently - this is far and easiest way of achieving thread safety rather than using synchronization 
+	- immutable objects can be shared freely
+- **They are great building blocks for other objects - be mutable or immutable.**
+	- It's much easier to maintain the **invariants of a complex objects** if you know it's component object will not change underneath.
+	- That's why they are great Map key and Set element - you don't have to worry about changing their values that will destroy the map and set's invariants. 
+### Disadvantage of immutable class
+- **The only real disadvantage of immutable classes is that they require a separate object for each distinct value.** Creating this object can be costly, specially if they are large.
+- This cost/performance is magnified if you perform multi steps operations.
+	- To solve this problem there are 2 approaches:
+		- **First: predict the multistep operations and separate them.**
+			- Do the multistep costly operations using primitive. Since primitive objects are mutable you don't have to create multiple objects for each values you generate. 
+			- **Example:** `BigInteger` has a package-private mutable "**companion class**" that is used to speed up expensive multistep operations (like - modular exponentiation)
+		- **Second: to provide public mutable companion class**
+			- The first one is only important when you can predict the multistage client operations. 
+			- If you can not predict the multistage client operation correctly you can use public mutable "**companion class**"
+			- **Example:** `String` class provide two public mutable "**companion class**" - `StringBuilder`(mostly used, not thread safe, and fast) and `StringBuffer` (largely obsolete, thread safe and slow). 
+				- when you need thread safety use `String` rather than using it's mutable companion thread safe class `StringBuffer` 
+### Some few more notes
+- there are few exceptions to [[#How to make a class immutable|above five rules]] you should know that could give you some advantage in some situations
+	- **Alternative of making class final**
+		- making all constructors **private** or **package-private** and add static factories' method in place of public constructors 
+			- to the clients those resides outside of the package this class is effectively final (even though you didn't use the final keyword).
+				- because it is impossible to extend the class outside from the package due to the lack of **public or protected constructor**
+		- adding static factories' method by this way is more flexible and has some benefits
+			- adding some code in static factories' method that could be release in later version without hampering the older clients code
+				- you could improve performance by allowing caching without affecting client's code
+		- adding multiple static factory methods is more elegant  than adding multiple constructor - it's more verbose as well 
+		```java
+		...
+		public Complex (double realPart, double imiginaryPart) {...} # take complex number in (x,y) coordinate format
+		public Complex (double r, double theta) {...}  # takes complex numbers in (r, theta) format
+
+		public static Complex ValueOf(double realPart, double imaginaryPart) {...}
+		public static Complex ValueOfPlar(double r, double theta) {...}  # more verbose and elegant naming
+		```
+- **Exception where you could use ** (some) **non-final fields** 
+	- "To make all fields final" - this rule is bit stronger than necessary.
+	- You can add some non-final fields in which they can cache result of the expensive computation.
+		- to store hash code of `PhoneNumber` where `PhoneNumber`  is an immutable class
 
 
+- **Finally**
+	- **class should be immutable unless there's  a very good reason to make  them mutable**
+		- you should always make small value object such as `PhoneNumber`, `Complex` (number) as immutable
+		- you should seriously consider making large value object like `String`, `StringBuilder` immutable as well
+		- though in java library there are several classes like `java.util.Date`, `java.awt.Point` that should have been immutable but aren't 
+	- provide public mutable companion class for your mutable class ***only when** you confirmed that it could provide satisfactory performance improvement.
+	- there are some classes for which immutability is impractical. If a class can not be immutable limit it's immutability as much as possible.
+		- **make every fields final unless there is a compelling reason to make it non-final**
+	- constructor should create fully initialized object with all of their invariants established 
+    
 
+--- 
 
 
 
