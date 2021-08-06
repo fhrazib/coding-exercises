@@ -196,7 +196,7 @@ Inheritance is the process by which one class acquires the properties(data membe
 		public static Complex ValueOf(double realPart, double imaginaryPart) {...}
 		public static Complex ValueOfPlar(double r, double theta) {...}  # more verbose and elegant naming
 		```
-- **Exception where you could use ** (some) **non-final fields** 
+- **Exception where you could use** (some) **non-final fields** 
 	- "To make all fields final" - this rule is bit stronger than necessary.
 	- You can add some non-final fields in which they can cache result of the expensive computation.
 		- to store hash code of `PhoneNumber` where `PhoneNumber`  is an immutable class
@@ -207,7 +207,7 @@ Inheritance is the process by which one class acquires the properties(data membe
 		- you should always make small value object such as `PhoneNumber`, `Complex` (number) as immutable
 		- you should seriously consider making large value object like `String`, `StringBuilder` immutable as well
 		- though in java library there are several classes like `java.util.Date`, `java.awt.Point` that should have been immutable but aren't 
-	- provide public mutable companion class for your mutable class ***only when** you confirmed that it could provide satisfactory performance improvement.
+	- provide public mutable companion class for your mutable class ***only when*** you confirmed that it could provide satisfactory performance improvement.
 	- there are some classes for which immutability is impractical. If a class can not be immutable limit it's immutability as much as possible.
 		- **make every fields final unless there is a compelling reason to make it non-final**
 	- constructor should create fully initialized object with all of their invariants established 
