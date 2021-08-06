@@ -9,8 +9,8 @@ from typing import List
 NTOE:
     - the main idea behind the algorithm is to push all elements to the left of array - those are not equal the target
     value. 
-    - Finally you will able modify the existing array with two partitions - left and right. 
-    - The left partition will contain all those element were no target value (value that need to remove) will present.
+    - By this way finally, you will able modify the existing array with two partitions - left and right. 
+    - Left partition will contain all those elements whose are not equal the target value(the value need to be removed).
     - We don't have to bother about the right partition
     - To make two portions in the array we can use a pointer, say - 'valid_size'
         - 'valid_size' will represent the size of the left array or number of non-val element 
