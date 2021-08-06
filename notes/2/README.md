@@ -215,16 +215,58 @@ Inheritance is the process by which one class acquires the properties(data membe
 
 --- 
 
+## Proof of Algorithms
+### Empirical Analysis
+- Empirical analysis is not really a proof, it dosen't guarantee the correctness of an algorithm
+- But most of the case it's good enough to ensure you that your algorithm will produce correct result for all cases. Its the most practical approach.
+- Though it's not a formal approach to proof the correctness of an algorithm is is the most used. Because its easy to use, solid enough in most of the practical case, and the lacking of mathematical knowledge of (most of the) programmer to prove an algorithm in formal way. 
+- **How empirical analysis is done?**
+	- your algorithm is tested against different critical inputs
+	- your algorithm is tested with candidate data from different group of data set (eg- positive integer, negative integer, fraction) and being checked whether it producing the expected results
+	- **Example:**  look at the following code that finds maximum values from an array. We are here trying to test our algorithm against different input. This is empirical analysis. Though here we use assertion to check whether the condition holds true in each case if you use your pen and notebook it still empirical analysis.
 
+		```python
+		def find_max_val(numbers):  
+			max_num = numbers[0]  
+			for i in range(0, len(numbers)):  
+				if numbers[i] > max_num:  
+					max_num = numbers[i]  
+			return max_num  
 
+		assert -4 == find_max_val([-13, -4, -24, -7]), 'Max value should be -4'  
+		assert 24 == find_max_val([13, 4, 24, 7]), 'Max value should be 24'  
+		assert 24 == find_max_val([13, -4, 24, -7]), 'Max value should be 24'  
+		assert 99 == find_max_val([5 / 2, -2.22, math.pi, 99]), 'Max value should be 99'
+		```
+### Formal Proof
+#### Mathematical Induction and Loop Invariant
+##### Mathematical Induction 
+- is a mathematical technique which is used to prove a statement, a formula or a theorem is true for every [[numbers-classifications|natural number]] (N). It consists of two steps
+	- **Step 1 (Base step):** Show your statement, $P(n)$ is true for some initial case. (usually n=0, 1) 
+	- **Step 2 (Induction step):** Show if n=k is true then n=k+1 is also true
+- Now you can say your statement $P(n)$ is true for all $n\in N$
+##### Loop Invariant
+```python
+def find_factorial(n):  
+     fac = 1  
+	 for i in range(1, n + 1):  
+			fac = fac * i
+```
+- these are some condition or state that always holds true after the execution of each step of a loop.
+- **Example:** if you see the above method in `find_factorial(n)`,  the loop invariant  there are
+	- after the end of any $n^{th}$ iteration the value of $n$ should be $n+1$
+	- after the end of any $n^{th}$ iteration the value it will gives you $n!$
 
-
-
-
-
+##### Use of mathematical induction to prove your algorithm correctness
+- To prove your algorithm correctness using mathematical induction, you also have to consider about two more thing
+	- **firstly**, find the **loop invariant**, then apply mathematical induction on it to check loop invariant is true for all natural numbers
+		-  you have to prove that loop invariants is true for some initial value like $n=0, 1...$
+		- you have to prove that loop invariant is true for $n=k$ AND it will also true for $n=k+1$
+	- **secondly**, you have to prove that your algorithm will stop at some $n=n_{end}$
+- this mathematical induction technique works well for algorithms that loop over integers, and can prove that an algorithm always produces correct output. Other styles of proofs can verify correctness for other types of algorithms, like **proof by contradiction** or **proof by exhaustion**.
 
 ---
-### Immutable 
+
 ## Two pointers technique
 ### Problem-solving example with two pointers - Palindrome Check
 #### 1st Attempt
