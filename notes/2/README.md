@@ -311,15 +311,6 @@ class Solution:
 ```
 **Complexity**: time O(n), space O(1)
 
-### Some more problem solved
-- [Remove duplicate from sorted array](../../problems/leetcode/leetcode_26.py)
-- [Remove elements](../../problems/leetcode/leetcode_27.py)
-- [Search Insert Position](../../problems/leetcode/leetcode_35.py)
-- [Maximum Subarray](../../problems/leetcode/leetcode_53.py)
-- [Plus One](../../problems/leetcode/leetcode_66.py)
-- [Pascal's Triangle](../../problems/leetcode/leetcode_118.py)
-- [Best time to buy and sell stock](../../problems/leetcode/leetcode_121.py)
-- [Best time to buy and sell stock II](../../problems/leetcode/leetcode_122.py)
-- [Valid palindrome](../../problems/leetcode/leetcode_125.py)
-- [Two sum II](../../problems/leetcode/leetcode_167.py)
+### [Some otehr problesm from Leetcode]()
+
 ---
