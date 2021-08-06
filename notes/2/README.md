@@ -179,7 +179,7 @@ Inheritance is the process by which one class acquires the properties(data membe
 			- **Example:** `String` class provide two public mutable "**companion class**" - `StringBuilder`(mostly used, not thread safe, and fast) and `StringBuffer` (largely obsolete, thread safe and slow). 
 				- when you need thread safety use `String` rather than using it's mutable companion thread safe class `StringBuffer` 
 ### Some few more notes
-- there are few exceptions to [above five rules](2#how-to-make-a-class-immutable) you should know that could give you some advantage in some situations
+- there are few exceptions to [above five rules](#how-to-make-a-class-immutable) you should know that could give you some advantage in some situations
 	- **Alternative of making class final**
 		- making all constructors **private** or **package-private** and add static factories' method in place of public constructors 
 			- to the clients those resides outside of the package this class is effectively final (even though you didn't use the final keyword).
