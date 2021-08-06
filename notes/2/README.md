@@ -241,10 +241,10 @@ Inheritance is the process by which one class acquires the properties(data membe
 ### Formal Proof
 #### Mathematical Induction and Loop Invariant
 ##### Mathematical Induction 
-- is a mathematical technique which is used to prove a statement, a formula or a theorem is true for every [[numbers-classifications|natural number]] (N). It consists of two steps
-	- **Step 1 (Base step):** Show your statement, $P(n)$ is true for some initial case. (usually n=0, 1) 
+- is a mathematical technique which is used to prove a statement, a formula or a theorem is true for every natural number(N). It consists of two steps
+	- **Step 1 (Base step):** Show your statement, **P(n)** is true for some initial case. (usually n=0, 1) 
 	- **Step 2 (Induction step):** Show if n=k is true then n=k+1 is also true
-- Now you can say your statement $P(n)$ is true for all $n\in N$
+- Now you can say your statement **P(n)** is true for all natrual numbers
 ##### Loop Invariant
 ```python
 def find_factorial(n):  
@@ -254,16 +254,16 @@ def find_factorial(n):
 ```
 - these are some condition or state that always holds true after the execution of each step of a loop.
 - **Example:** if you see the above method in `find_factorial(n)`,  the loop invariant  there are
-	- after the end of any $n^{th}$ iteration the value of $n$ should be $n+1$
-	- after the end of any $n^{th}$ iteration the value it will gives you $n!$
+	- after the end of any **nth** iteration the value of **n** should be **n+1**
+	- after the end of any **nth** iteration the value it will gives you **n!**
 
 ##### Use of mathematical induction to prove your algorithm correctness
 - To prove your algorithm correctness using mathematical induction, you also have to consider about two more thing
 	- **firstly**, find the **loop invariant**, then apply mathematical induction on it to check loop invariant is true for all natural numbers
-		-  you have to prove that loop invariants is true for some initial value like $n=0, 1...$
-		- you have to prove that loop invariant is true for $n=k$ AND it will also true for $n=k+1$
-	- **secondly**, you have to prove that your algorithm will stop at some $n=n_{end}$
-- this mathematical induction technique works well for algorithms that loop over integers, and can prove that an algorithm always produces correct output. Other styles of proofs can verify correctness for other types of algorithms, like **proof by contradiction** or **proof by exhaustion**.
+		-  you have to prove that loop invariants is true for some initial value like **n=0, 1...**
+		- you have to prove that loop invariant is true for **n=k** AND it will also true for **n=k+1**
+	- **secondly**, you have to prove that your algorithm will stop at some value of **n**
+- this mathematical induction technique works well for algorithms that loop over integers, and`` can prove that an algorithm always produces correct output. Other styles of proofs can verify correctness for other types of algorithms, like **proof by contradiction** or **proof by exhaustion**.
 
 ---
 
