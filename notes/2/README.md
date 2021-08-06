@@ -267,8 +267,48 @@ def find_factorial(n):
 
 ---
 
-## Two pointers technique
-### Problem-solving example with two pointers - Palindrome Check
-#### 1st Attempt
-#### 2nd Attempt
-#### 3rd Attempt
+## Coding Exercise
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        char_array = [c.lower() for c in s if c.isalnum()]
+
+        start = 0
+        end = len(char_array) - 1
+        while start <= end:
+            if char_array[start] != char_array[end]:
+                return False
+            start = start + 1
+            end = end - 1
+
+        return True
+```
+**Complexity**: time O(n), space O(n)
+
+### [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) 
+Given an array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.
+```python
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        result = []
+
+        start = 0
+        end = len(numbers) - 1
+        while start <= end:
+            _sum = numbers[start] + numbers[end]
+            if target == _sum:
+                result = [start + 1, end + 1]
+                break
+            elif _sum > target:
+                end = end - 1
+            elif _sum < target:
+                start = start + 1
+
+        return result
+```
+**Complexity**: time O(n), space O(1)
+
+---
