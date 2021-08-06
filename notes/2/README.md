@@ -78,7 +78,7 @@ Prius:Turning left...
 ### Four Pillars of OOP
 
 #### Abstraction
-Abstraction allow us only to show the essential things to users. It hides the  details' implementation, trivial or the non-essential units from the users. In other words abstraction is the hiding details and complexities and showing only the necessary part to the users. Its one of the most fundamental concepts of OOP. 
+Abstraction allow us only to show the essential things to users. It hides the  details' implementation, trivial or the non-essential units from the users. In other words abstraction is the hiding details and complexities and showing only the necessary part to the users. Its one of the most fundamental concepts of OOP.  
 **Example**:  when you login to your email account online, you enter your `user_id` and `password` to login. What happens when you hit login, how the input data sent to server, how it gets verified is all abstracted away from the you.
 
 Data Abstraction may also be defined as the process of identifying only the required characteristics of an object ignoring the irrelevant details. The properties and behaviors of an object differentiate it from other objects of similar type and also help in classifying/grouping the objects.  
