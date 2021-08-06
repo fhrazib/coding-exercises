@@ -1,5 +1,5 @@
 """
-Name: Remove element
+Name: Valid Palindrome
 URL: https://leetcode.com/problems/valid-palindrome/
 Tags: #array
 """
