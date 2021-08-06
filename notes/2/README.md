@@ -17,7 +17,7 @@ A class is the blueprint of a real world entity. Class encapsulates both attribu
 Class also could be think as user defined (or derived) data type. While the programming language provided data type like `int`, `float` etc could represent simple real world data like - number of doors/wheels in a `Car`, age of a person, but they can not represent real world complex data like `Car`. Because car has both - attribute and behaviors. OOP give you the opportunity to make a complex data type for `Car` using class. That's why class is often called user defined data type or derived data type.
 
 #### Object
-Object is the instance of class. It is the 
+Object is the instance of class.  
 
 Object could also think as class type data. You define a class - `Car` as your complex data type. Now you can create your own data from that data type `Car` that will reside in memory. 
 
@@ -78,11 +78,10 @@ Prius:Turning left...
 ### Four Pillars of OOP
 
 #### Abstraction
-Abstraction allow us only to show the essential things to users. It hides the  details' implementation, trivial or the non-essential units from the users. In other words abstraction is the hiding details and complexities and showing only the necessary part to the users. Its one of the most fundamental concepts of OOP.   
+Abstraction allow us only to show the essential things to users. It hides the  details' implementation, trivial or the non-essential units from the users. In other words abstraction is the hiding details and complexities and showing only the necessary part to the users. Its one of the most fundamental concepts of OOP. 
 **Example**:  when you login to your email account online, you enter your `user_id` and `password` to login. What happens when you hit login, how the input data sent to server, how it gets verified is all abstracted away from the you.
 
 Data Abstraction may also be defined as the process of identifying only the required characteristics of an object ignoring the irrelevant details. The properties and behaviors of an object differentiate it from other objects of similar type and also help in classifying/grouping the objects.  
-
 **Example:** Say you are designing a student management system for a university. You have to model a student's attributes and behaviors in `Student` class. A student in real life may have a lot of attributes like - roll number, registration number, CGPA, SSN, height, weight and so on. Similarly as student might have a lot of behavior like - enrolling himself to a particular course, paying semester fees,  taking part in exam, traveling, listening to musics. 
 But abstraction tell us only to take the attributes and behaviors those are relevant to student management system and ignore all others attributes and behaviors. 
 
