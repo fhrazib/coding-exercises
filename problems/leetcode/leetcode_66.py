@@ -27,6 +27,13 @@ class Solution:
         # print(result)
         return result
 
+    def plusOneV2(self, digits: List[int]) -> List[int]:
+        result = list(map(int, str(int(''.join(map(str, digits))) + 1)))
+        return result
+
+    def plusOneV3(self, digits: List[int]) -> List[int]:
+        return [int(x) for x in str(int(''.join(map(str, digits))) + 1)]
+
 #
 # s = Solution()
 # a = [1, 2, 3]
