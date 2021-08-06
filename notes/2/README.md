@@ -319,7 +319,7 @@ class Solution:
 - [Plus One](../../problems/leetcode/leetcode_66.py)
 - [Pascal's Triangle](../../problems/leetcode/leetcode_118.py)
 - [Best time to buy and sell stock](../../problems/leetcode/leetcode_121.py)
-- [Best time to buy and sell stock II](../../problems/leetcode/leetcode_128.py)
+- [Best time to buy and sell stock II](../../problems/leetcode/leetcode_122.py)
 - [Valid palindrome](../../problems/leetcode/leetcode_125.py)
 - [Two sum II](../../problems/leetcode/leetcode_167.py)
 ---
