@@ -44,3 +44,4 @@ class Solution:
 # d = [2, 7, 9, 11]
 # print(s.searchInsert(c, 3))
 
+
