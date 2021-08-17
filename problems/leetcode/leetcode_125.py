@@ -24,3 +24,4 @@ class Solution:
 # s1 = "A man, a plan, a canal: Panama"  # True
 # s2 = "race a car"  # False
 # print(s.isPalindrome(s2))
+
