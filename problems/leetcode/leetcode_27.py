@@ -35,3 +35,4 @@ class Solution:
 # size = s.removeElement(a, 2)
 # print(len(a), id(a), size)
 # print(a)
+
