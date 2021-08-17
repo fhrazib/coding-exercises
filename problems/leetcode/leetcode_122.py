@@ -30,3 +30,5 @@ class Solution:
 # b = [1, 2, 3, 4, 5]  # 4
 # c = [7, 6, 4, 3, 1]  # 0
 # print(s.maxProfit(a))
+
+
