@@ -31,3 +31,5 @@ class Solution:
 # p1 = [7, 1, 5, 3, 6, 4]  # 5
 # p2 = [7, 6, 4, 3, 1]  # 0
 # print(s.maxProfit(p1))
+
+
