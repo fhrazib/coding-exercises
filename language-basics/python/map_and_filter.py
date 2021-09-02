@@ -1,12 +1,12 @@
 """
 map(function, iterable, ...)
-    - map could be think as transform of iterables
+    - map could be think as transformer of iterables
     - map pass each of the value from the iterable to the function to transform (or do anything)
     - map returns a map object
     - later you can pass this map object to functions like - list()(to create list), set() (to create set) and so on
 
 NOTE:
-    - map doesnt return an ITERABLE
+    - map doesn't return an ITERABLE
     - map process EACH element of an ITERABLE.
     - though you pass an whole ITERABLE to a map, map itself send EACH ELEMENT from that iterable to your given function
 
