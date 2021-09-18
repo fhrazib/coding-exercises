@@ -20,8 +20,8 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self.head = None  # contains the reference of the first node
+        self.tail = None  # contains the reference of the last non-null node
 
     def append(self, data):
         new_node = Node(data)
@@ -42,40 +42,55 @@ class LinkedList:
             self.tail.next = new_node
             self.tail = new_node
 
-    def print_ll(self):
+    def print(self, print_address=False):
         current = self.head
         while current:  # 3
-            # print(current.data)
-            print(hex(id(current)).upper(), ': ', current.data)
+            if print_address:
+                print(hex(id(current)).upper(), ': ', current.data)
+            else:
+                print(current.data, end=' ')
             current = current.next
+        print()
 
 
-print('Linked list append version 1: using while loop to iterate up to the last node')
-ll = LinkedList()
-ll.append(2)
-ll.append(5)
-ll.append(3)
-ll.append(7)
-ll.append(10)
-ll.append(11)
-ll.append(100)
-ll.append(109)
-ll.append(19)
-ll.append(160)
-ll.append(15)
-ll.append(15)
-ll.print_ll()
+def print_from_node(node):
+    current = node
+    while current:
+        print(current.data, end=' ')
+        current = current.next
+    print()
 
 
-print('\nLinked list append version 2: using tail; no iteration needed while appending new nodes')
-ll2 = LinkedList()
-ll2.append_v2(1)
-ll2.append_v2(2)
-ll2.append_v2(3)
-ll2.append_v2(5)
-ll2.append_v2(6)
-ll2.append_v2(9)
-ll2.append_v2(5)
-ll2.append_v2(9)
-ll2.append_v2(9)
-ll2.print_ll()
+def main():
+    print('Linked list append version 1: using while loop to iterate up to the last node')
+    ll = LinkedList()
+    ll.append(2)
+    ll.append(5)
+    ll.append(3)
+    ll.append(7)
+    ll.append(10)
+    ll.append(11)
+    ll.append(100)
+    ll.append(109)
+    ll.append(19)
+    ll.append(160)
+    ll.append(15)
+    ll.append(15)
+    ll.print(True)
+
+    print('\nLinked list append version 2: using tail; no iteration needed while appending new nodes')
+    ll2 = LinkedList()
+    ll2.append_v2(1)
+    ll2.append_v2(2)
+    ll2.append_v2(3)
+    ll2.append_v2(5)
+    ll2.append_v2(6)
+    ll2.append_v2(9)
+    ll2.append_v2(5)
+    ll2.append_v2(9)
+    ll2.append_v2(9)
+    ll2.print()
+
+
+if __name__ == "__main__":
+    main()
