@@ -8,7 +8,7 @@
   <component name="PyNamespacePackagesService">
     <option name="namespacePackageFolders">
       <list>
-        <option value="$MODULE_DIR$/standard_ds_and_algo" />
+        <option value="$MODULE_DIR$/standard-ds-and-algorithm" />
       </list>
     </option>
   </component>
