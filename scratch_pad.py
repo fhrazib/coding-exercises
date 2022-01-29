@@ -11,10 +11,6 @@ str = 'abacdefghi'
 
 def main():
 
-    col0 = [v[0] for v in graph]
-    str2 = [s for s in str]
-    print(str2)
-    print(col0)
 
     pass
 
