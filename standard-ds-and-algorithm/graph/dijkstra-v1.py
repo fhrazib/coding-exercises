@@ -1,3 +1,9 @@
+"""
+Version1:
+    - implementation with adjacency matrix
+"""
+
+
 def pick_min_cost_vertex(processed, cost, n):
     min_cost = float('inf')
     vertex = None
@@ -35,7 +41,6 @@ def simple_dijkstra(graph, source):
 
 
 def main():
-
     # Expected output
     # parents:  [-1, 0, 0, 1, 3, 3]
     # costs:    [0, 1, 4, 3, 7, 9]
