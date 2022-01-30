@@ -34,7 +34,7 @@ def simple_dijkstra(graph, source):
             if graph[u][v] != 0 and (not processed[v]):
                 if (cost[u] + graph[u][v]) < cost[v]:
                     cost[v] = cost[u] + graph[u][v]
-                    parents[v] = u
+                    parents[v] = u  # Now we know, we can reach v from u with a minimum cost - cost[v]
 
     print('parents: ', parents)
     print('cost:    ', cost)
