@@ -1,6 +1,6 @@
 """
 PROBLEM STATEMENT:
-    - PROBLEM_STATEMENT_TWO: You have given an array 'A' and an integer 'K'. Find the maximum SUM for each and every
+    - PROBLEM_STATEMENT_ONE: You have given an array 'A' and an integer 'K'. Find the maximum SUM for each and every
     contiguous subarray of size K
         - aks maximum sum subarray of size K
         - aks sliding window maxSum
@@ -14,7 +14,7 @@ PROBLEM STATEMENT:
         - aks sliding window maximum
 
 SLIDING WINDOW TECHNIQUE:
-    - to understand sliding window technique better lets first analyze PROBLEM_STATEMENT_TWO's brute force solution.
+    - to understand sliding window technique better lets first analyze PROBLEM_STATEMENT_ONE's brute force solution.
     - say you have given an array A = [2, -1, 3, 5, -3, 8, 7, 5] and K = 4
     - Now with brute force approach possible all sub-arrays of size 4 are
         - [2 -1 3 5]      : 4      #1
