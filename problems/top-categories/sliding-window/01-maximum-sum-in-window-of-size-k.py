@@ -17,8 +17,11 @@ a = [1, 2, 3, 4, 5, 6, 7] and k=3
 
 
 SOLVING APPROACHES:
-    - ONE: Brute force
-    - TWO: Sliding window
+    - ONE: Brute force => O(n*k) => O(n^2)
+    - TWO: Sliding window with the help of external for loop that find only the sum of the first window => O(n)
+    - THREE: Sliding window with no help of external for loop to find the first window sum => O(n) # TODO
+        - little improvement over the second approach but time complexity is still O(n). Since we don't need to use the
+        external for loop to find the initial/first window sum.
 """
 
 
@@ -37,6 +40,7 @@ def maximum_window_sum_bf(a, k):
     return max_sum
 
 
+# Sliding window  + with the help of external for loop that fine only the sum of the first window
 def sliding_window_sum(a, k):
     n = len(a)
     max_sum = float('-inf')
