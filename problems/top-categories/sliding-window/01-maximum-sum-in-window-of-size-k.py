@@ -44,10 +44,10 @@ def maximum_window_sum_bf(a, k):
 def sliding_window_sum(a, k):
     n = len(a)
     max_sum = float('-inf')
-    ws = sum(a[:k])
+    ws = sum(a[:k])  # single for loop equivalent
 
     for i in range(1, n - k + 1):
-        ws = ws - a[i - 1] + a[i + k - 1]  # FOOT_NOTE-1
+        ws = ws - a[i - 1] + a[i + k - 1]  # NOTE-1
         max_sum = max(max_sum, ws)
     return max_sum
 
@@ -66,9 +66,8 @@ if __name__ == '__main__':
     sld_result = sliding_window_sum(array, window_size)
     print(sld_result)
 
-
 """
-FOOT_NOTES: (assuming k=3 and array=a2)
+NOTES: (assuming k=3 and array=a2)
     - 1:  a[i + k -1] Note here, we write (k-1) not k. 
         - Because we started the for loop from 1. So if we add (i+k) it will point 4th index  which is '2'. 
         - But we want to point the 3rd index which is '1'. So we have to shift 1 index left. that's why it is a[i+k-1]

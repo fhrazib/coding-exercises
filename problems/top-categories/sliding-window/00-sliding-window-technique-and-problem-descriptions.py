@@ -2,6 +2,7 @@
 PROBLEM STATEMENT:
     - PROBLEM_STATEMENT_ONE: You have given an array 'A' and an integer 'K'. Find the maximum SUM for each and every
     contiguous subarray of size K
+        - See this file for code implementation- 01-maximum-sum-in-window-of-size-k.py
         - aks maximum sum subarray of size K
         - aks sliding window maxSum
         - DO NOT CONFUSE with 'maximum subarray (of any length) sum'. Here the subarray could be of any length. We can
@@ -10,6 +11,7 @@ PROBLEM STATEMENT:
 
     - PROBLEM_STATEMENT_TWO: You have given an array 'A' and an integer 'K'. Find the maximum for each and every
     contiguous subarray of size K
+        - See this file for code implementation - 02-sliding-window-maximum.py
         - aks maximum of all subarray of size K
         - aks sliding window maximum
 
