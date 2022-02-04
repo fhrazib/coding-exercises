@@ -7,8 +7,7 @@ Same as LeetCode Problem : 239:
 array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one
 position.
 
--
-SOLVING APPROACHES:
+- SOLVING APPROACHES:
     - ONE: Brute force Naive approach => O(N*K) => O(N^2)
     - TWO: Using self balancing tree => log(N*logK) # TODO
     - THREE: Using heap data structure. Max heap for finding maximum, mean heap for finding minimum => O(N*logK) # TODO
