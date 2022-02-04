@@ -34,9 +34,31 @@ def maximum_in_a_window_bf(arr, k):
     return max_list
 
 
-# FOUR: Using dequeue: Use a double ended queue to store elements of the window
-# Time Complexity: O(N)
-# Space Complexity: O(K)
+"""
+- FOUR: Using dequeue: Use a double ended queue to store elements of the window
+- Time Complexity: O(N)
+- Space Complexity: O(K)
+
+- THE MAIN IDEA BEHIND  THE ALGORITHM: 
+    - we have to find the maximum from the each window of size K. With naive brute force approach We have to find this 
+    max value so many times that it gives time limit exceed error. 
+    - SO IF WE CAN manage a datastructures that provide us the max value with minimum cost then we can use this data 
+    structure here. 
+    - There are 2 datastructures here  that gives us the max value with lowest cost (no searching) - (1) Self balancing 
+    binary tree (BST) (2) Max heap.
+    - We also could use dequeue
+        - We have to manage the deque such a way that the max element will always be at the front of the queue. And the 
+        dequeue always remains decreasing. We weill larger remove value/index  from front and add smaller value/index at
+        rear. 
+
+- STEPS USED IN THIS ALGORITHM
+    - Step 1 - Popping Smaller and Appending (current) Right Index : appending the appropriate right index of the 
+    sliding window. (Smaller index will be popped from right)
+    - Step 2 - Removing left values from the window (queue)
+    - STEP 3 - Picking and Sliding: picking the max element and slide the window
+"""
+
+
 def finding_maximum_with_sliding_window(arr, k):
     output = []
     queue = collections.deque()
@@ -45,7 +67,8 @@ def finding_maximum_with_sliding_window(arr, k):
     # Will run our algorithm while our right pointer still inbound.
     while r < len(arr):
         """
-        Step 1 - Popping Smaller and Appending Right Index : appending the appropriate right index of the sliding window
+        STEP 1 - Popping Smaller and Appending (current) Right Index : appending the appropriate right index of the 
+        sliding window
         ----------------------------------------------------------------------------------------------------------------
         - How we determine the appropriate right index 'r' ?
             - Before appending we have to check : arr[queue[-1]] < arr[r]
@@ -64,7 +87,7 @@ def finding_maximum_with_sliding_window(arr, k):
         queue.append(r)
 
         """
-        Step 2 - Removing left values from the window (queue)
+        Step 2 - Removing left values from the older window (queue)
         ----------------------------------------------------------------------------------------------------------------
         - When we need to remove the left value?
             - When our left values out of bound
@@ -72,6 +95,12 @@ def finding_maximum_with_sliding_window(arr, k):
             - window is bounded by index ==> (l, r)
             - so queue[0]>=l and queue[0]<=r
             - so we have to remove from left while l>queue[0]
+            
+        - WHY WE ARE REMOVING THE LEFT VALUE BEFORE WE PICKING AND PUBLISHING IT (which is done at STEP 3)?
+            - because we are removing the older value from the front of the queue. 
+            - this step will not execute at first iteration. at first iteration the window just slide right. 
+            - because at the first iteration the window slided right. So there is a old value at the left of the queue 
+            and we have to remove it.  
         """
         if l > queue[0]:
             queue.popleft()
@@ -80,9 +109,9 @@ def finding_maximum_with_sliding_window(arr, k):
         STEP 3 - Picking and Sliding: picking the max element and slide the window
         ----------------------------------------------------------------------------------------------------------------
         - slide the right border of the window each of this iteration
-        - if we want to publish max value to output we have to make sure our window is full. That we have to make sure 
-        our window is currently containing at least k number ==> window is full. When the window is full we can then 
-        take the left most element from the window as max.
+        - if we want to publish max value to output we have to make sure our window is full. That means we have to make 
+        sure our window is currently containing at least k number ==> window is full. When the window is full then  
+        we can take the left most element from the window as max.
         - when the window is full we also forward the left pointer
         """
         if (r + 1) >= k:
@@ -96,14 +125,18 @@ def finding_maximum_with_sliding_window(arr, k):
 Time complexity: O(n)
 Space complexity: O(n)
 
-QUESTION: How this algorithm has O(n) complexity while is has 2 nested for loops?
+QUESTION: How this algorithm has O(n) complexity while is has 2 nested loops?
 - Because 
     - (1) The inner for loop run only once (up to length K) to fill the window up to K elements. The while loop runs 
     full for r=0 (may be). There is no way the inner for loop run for each value of 'r' 
-    - (2) Since the window is full now. Then inner for loop only works as an if condition. It will just pop (remove) the 
+    - (2) From the second iteration (r=1) and onward the window will be filled up by k elements. So we won't never enter 
+    into the inner loop again.  
+    - (3) Since the window is full now. Then inner for loop only works as an if condition. It will just pop (remove) the 
     right most element from the queue.
+    - (4) The window might be empty at the very end of the array. In that case it's OK. Since we have no element to 
+    iterate again
     
-- NOTE: 
+- NOTE-1: 
     - the inner for loop could be replaced with  a outer for loop  (like in 
     01-maximum-sum-in-window-of-size-k.py.sliding_window_sum(a, k))
 """
