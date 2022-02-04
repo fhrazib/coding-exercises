@@ -102,7 +102,7 @@ def finding_maximum_with_sliding_window(arr, k):
             and we have to remove it.  
         """
         if l > queue[0]:
-            queue.popleft()
+            queue.popleft()  # No need to check the left most element anymore. Window already slided to right
 
         """
         STEP 3 - Picking and Sliding: picking the max element and slide the window
