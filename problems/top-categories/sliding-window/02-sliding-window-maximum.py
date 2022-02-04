@@ -2,12 +2,17 @@
 - PROBLEM_STATEMENT_TWO: You have given an array 'A' and an integer 'K'. Find the maximum for each and every
 contiguous subarray of size K
 
+Same as LeetCode Problem : 239:
+- You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the
+array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one
+position.
+
 -
 SOLVING APPROACHES:
-    - ONE: Brute force Naive approach => O(n*k) => O(n^2)
-    - TWO: Using self balancing tree => log(n) # TODO
-    - THREE: Using heap data structure. Max heap for finding maximum, mean heap for finding minimum # TODO
-    - FOUR: Using dequeue: Use a double ended queue to store elements of the window
+    - ONE: Brute force Naive approach => O(N*K) => O(N^2)
+    - TWO: Using self balancing tree => log(N*logK) # TODO
+    - THREE: Using heap data structure. Max heap for finding maximum, mean heap for finding minimum => O(N*logK) # TODO
+    - FOUR: Using dequeue: Use a double ended queue to store elements of the window => O(N)
     - All these above four approaches are described here - https://afteracademy.com/blog/sliding-window-maximum
 """
 import collections
@@ -30,6 +35,8 @@ def maximum_in_a_window_bf(arr, k):
 
 
 # FOUR: Using dequeue: Use a double ended queue to store elements of the window
+# Time Complexity: O(N)
+# Space Complexity: O(K)
 def finding_maximum_with_sliding_window(arr, k):
     output = []
     queue = collections.deque()
