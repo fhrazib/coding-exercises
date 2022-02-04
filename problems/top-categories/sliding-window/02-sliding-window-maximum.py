@@ -113,7 +113,7 @@ def finding_maximum_with_sliding_window(arr, k):
         we can take the left most element from the window as max.
         - when the window is full we also forward the left pointer
         """
-        if (r + 1) >= k:
+        if (r + 1) >= k:  # NOTE-2
             output.append(arr[queue[0]])
             l += 1
         r += 1
@@ -138,6 +138,14 @@ QUESTION: How this algorithm has O(n) complexity while is has 2 nested loops?
 - NOTE-1: 
     - the inner for loop could be replaced with  a outer for loop  (like in 
     01-maximum-sum-in-window-of-size-k.py.sliding_window_sum(a, k))
+- NOTE-2:
+    - Why it is (r+1)>=K, instead of r>K?
+    - because the index is 0 based, we start r from 0. But the window size K is a count. It start from 1. So we add 1 to 
+    fix this difference.
+    - we use >=  instead of > because we want to make sure we cover every case. 
+        - sometimes it may happen the window (r+1) = K (in the first window)
+        - sometimes (r+1)>K (all window rather than the first one)
+    - BUT we want to cover both case that's why we usages >= instead of >
 """
 
 if __name__ == '__main__':
@@ -147,8 +155,8 @@ if __name__ == '__main__':
     a4, k4 = [198, 2, 83, 989, 5, 98, 7, -3, -87, 21, 0, -91, 23, 1005, -45, 56, -9, 150, 101, -11, 34, 98, 234, 10], 5
     # [989, 989, 989, 989, 98, 98, 21, 21, 23, 1005, 1005, 1005, 1005, 1005, 150, 150, 150, 150, 234, 234]
 
-    array = a4
-    window_size = k4
+    array = a3
+    window_size = k3
     result = maximum_in_a_window_bf(array, window_size)
     print(result)
 
